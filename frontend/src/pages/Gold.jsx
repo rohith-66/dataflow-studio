@@ -83,7 +83,7 @@ export default function Gold({ bronzeData, silverData, onRestart }) {
   useEffect(() => {
     async function fetchGold() {
       try {
-        const res = await axios.post("http://localhost:8000/gold/analyze", {
+        const res = await axios.post("https://dataflow-studio-backend.onrender.com/gold/analyze", {
           preview: bronzeData.preview,
           schema: bronzeData.schema,
           summary: silverData.summary,
@@ -110,7 +110,7 @@ export default function Gold({ bronzeData, silverData, onRestart }) {
       filename: bronzeData.filename,
     };
 
-    const res = await fetch(`http://localhost:8000/gold/download/${type}`, {
+    const res = await fetch(`https://dataflow-studio-backend.onrender.com/gold/download/${type}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

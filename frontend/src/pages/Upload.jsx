@@ -17,7 +17,7 @@ export default function Upload({ onUploadSuccess }) {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:8000/bronze/upload", formData);
+      const res = await axios.post("https://dataflow-studio-backend.onrender.com/bronze/upload", formData);
       onUploadSuccess(res.data);
     } catch (err) {
       setError("Upload failed. Make sure your backend is running.");

@@ -77,7 +77,7 @@ export default function Silver({ bronzeData, onNext, onBack }) {
   useEffect(() => {
     async function fetchSilver() {
       try {
-        const res = await axios.post("http://localhost:8000/silver/transform", {
+        const res = await axios.post("https://dataflow-studio-backend.onrender.com/silver/transform", {
           preview: bronzeData.preview,
           schema: bronzeData.schema,
           quality: bronzeData.quality,
