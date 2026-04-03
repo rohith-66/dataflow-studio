@@ -32,7 +32,7 @@ function GoldLoader() {
       });
     }, 1800);
     return () => clearInterval(interval);
-  }, []);
+}, [steps.length]);
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-20">
