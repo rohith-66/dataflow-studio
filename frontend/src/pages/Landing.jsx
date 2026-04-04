@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 const TECH = [
   { name: "PySpark", color: "#E25A1C", slug: "apachespark" },
   { name: "BigQuery", color: "#4285F4", slug: "googlebigquery" },
@@ -32,7 +34,6 @@ const FEATURES = [
 ];
 
 export default function Landing({ onStart }) {
-  const canvasRef = useRef(null);
 
   return (
     <div className="min-h-screen text-white overflow-x-hidden"
