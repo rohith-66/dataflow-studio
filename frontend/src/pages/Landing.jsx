@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 const TECH = [
   { name: "PySpark", color: "#E25A1C", slug: "apachespark" },
   { name: "BigQuery", color: "#4285F4", slug: "googlebigquery" },
