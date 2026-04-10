@@ -5,6 +5,7 @@ import Bronze from "./pages/Bronze";
 import Silver from "./pages/Silver";
 import Gold from "./pages/Gold";
 import Layout from "./components/Layout";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [stage, setStage] = useState("landing");
