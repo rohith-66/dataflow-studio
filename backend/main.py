@@ -7,6 +7,9 @@ from routes import bronze, silver, gold
 load_dotenv()
 
 app = FastAPI(title="DataFlow Studio API")
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 app.add_middleware(
     CORSMiddleware,
