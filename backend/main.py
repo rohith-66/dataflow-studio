@@ -7,7 +7,7 @@ from routes import bronze, silver, gold
 load_dotenv()
 
 app = FastAPI(title="DataFlow Studio API")
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok"}
 
